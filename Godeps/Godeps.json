@@ -1,0 +1,16 @@
+{
+	"ImportPath": "proxy",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/elazarl/goproxy",
+			"Comment": "v1.0-108-gaacba83",
+			"Rev": "aacba83f36a55ac31cbb71c06547a328c0cd1604"
+		},
+		{
+			"ImportPath": "golang.org/x/net/proxy",
+			"Rev": "5961165da77ad3a2abf3a77ea904c13a76b0b073"
+		}
+	]
+}
