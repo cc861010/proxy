@@ -310,7 +310,7 @@ var AlwaysReject FuncHttpsHandler = func(host string, ctx *ProxyCtx) (*ConnectAc
 // HandleBytes will return a RespHandler that read the entire body of the request
 // to a byte array in memory, would run the user supplied f function on the byte arra,
 // and will replace the body of the original response with the resulting byte array.
-func HandleBytes(f func(b []byte, ctx *ProxyCtx) []byte) RespHandler {
+func lock(f func(b []byte, ctx *ProxyCtx) []byte) RespHandler {
 	return FuncRespHandler(func(resp *http.Response, ctx *ProxyCtx) *http.Response {
 		b, err := ioutil.ReadAll(resp.Body)
 		if err != nil {
