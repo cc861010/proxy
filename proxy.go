@@ -4,6 +4,7 @@ import (
         "flag"
         "log"
         "net/http"
+        "fmt"
 
         "github.com/elazarl/goproxy"
         "golang.org/x/net/proxy"
@@ -31,8 +32,8 @@ func main() {
                 log.Fatalf("can't connect to the proxy: %v", err)
                 return
         }else{
-                log.Println("export HTTP_PROXY=http://localhost:8008")
-                log.Println("export HTTPS_PROXY=http://localhost:8008")
+                fmt.Println("export HTTP_PROXY=http://localhost:8008")
+                fmt.Println("export HTTPS_PROXY=http://localhost:8008")
         }
 
         proxy := goproxy.NewProxyHttpServer()
